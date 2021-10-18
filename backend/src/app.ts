@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import { userRouter } from "./routes/User";
 // import {ProductRoutes} from './routes/Products';
 // import {UserRoutes} from './routes/Users';
 class App {
@@ -36,6 +37,9 @@ class App {
     );
   }
 
-  private allRoutes(): void {}
+  private allRoutes(): void {
+    //User api
+    this.app.use("/api", userRouter);
+  }
 }
 export default new App().app;

@@ -2,7 +2,7 @@ import mongoose, { ConnectOptions } from "mongoose";
 import app from "./app";
 import dotenv from "dotenv";
 mongoose
-  .connect("mongodb://localhost:27017/Multer", {
+  .connect("mongodb://localhost:27017/mernblog", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   } as ConnectOptions)

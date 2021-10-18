@@ -22,7 +22,8 @@ const userSchema = new mongoose.Schema({
   },
   avatar: {
     type: String,
-    default: "http://localhost:4000/uploads/default/avatar.png",
+    default:
+      "https://p.kindpng.com/picc/s/78-785827_user-profile-avatar-login-account-male-user-icon.png",
   },
   role: {
     type: String,
@@ -85,4 +86,5 @@ userSchema.methods.getJwtToken = function () {
     expiresIn: process.env.JWT_EXPIRES_TIME,
   });
 };
-module.exports = mongoose.model("User", userSchema);
+const User = mongoose.model("User", userSchema);
+export { User };
